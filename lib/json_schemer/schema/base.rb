@@ -385,7 +385,7 @@ module JSONSchemer
             when 'application/json'
               yield error(instance, 'contentMediaType') unless valid_json?(decoded_data)
             else
-              raise NotImplementedError
+              # don't check other types of content
             end
           end
         end
